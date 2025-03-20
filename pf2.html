@@ -1,0 +1,312 @@
+<html>
+    <head>
+        <title>My Portfolio</title>
+        <style>
+            body{
+              background-color: rgb(1, 1, 50);
+            }
+            html {
+              scroll-behavior: smooth;
+          }
+          .navbar{
+             background-color: transparent;
+             overflow: hidden;
+             position: fixed;
+             top: 0;
+             width: 98%;
+             height: 42px;
+             display: flex;
+             padding: 10px;
+             z-index: 100;
+             box-shadow: 0 2px 5px rgba(130, 187, 186, 0.973);
+             transition: background-color 0.3s ease;
+             border-radius: 20px 20px 20px 20px;
+            
+          }
+          a {
+            color: white !important;  /* Change text color */
+            text-decoration: none !important;  /* Remove underline */
+        }
+        
+          .navItem{
+            font-family: cursive;
+             font-size: 15px;
+             font-weight: 700;
+             color: azure;
+             margin: 0px 25px 0px 25px;
+             padding: 10px 35px 10px 35px;
+             transition: background-color 0.3s ease;
+             border-radius: 10px 10px 10px 10px;
+           
+             text-align: center;
+             text-shadow: 0 0 5px #00ccff, 
+             0 0 10px #0099ff, 
+             0 0 15px #0066ff, 
+             0 0 20px #0033ff, 
+             0 0 25px #001aff;
+     
+            }
+            a:hover {
+              color: #ffffff;
+          
+              text-shadow: 
+                  0 0 10px #ffffff, 
+                  0 0 20px #00ccff, 
+                  0 0 30px #0099ff, 
+                  0 0 40px #0066ff, 
+                  0 0 50px #0033ff;
+          }
+          #name{
+            padding: 10px 275px 10px 25px ;
+          }
+          
+          #id:hover{
+
+            text-shadow: 1px 1px 1px rgba(255,255,255);
+          }
+          #name{
+            padding: 10px 200px 10px 25px;
+            font-family: cursive;
+             font-size: x-large;
+             font-weight: 700;
+            color: azure;
+            border-radius: 20px 20px 0px 0px;
+            text-shadow: 3px 5px 9px azure;
+
+          }
+          .headline{
+            display: flex;
+          }
+          .headline img{
+            margin-top: 75px;
+            padding-left: 180px;
+            width: 300px;
+            height: 300px;
+      
+        
+          }
+          #name-tag{
+            display: flex;
+            font-size:28px;
+            font-weight: 500;
+            color: azure;
+            font-family: cursive;
+          }
+          
+          #name-tag > span{
+            font-size:50px;;
+            font-weight: 800;
+            color: azure;
+            font-family: cursive;
+            text-shadow: 3px 6px 9px azure;
+          }
+          .name{
+            padding: 275px 0px 15px 25px;
+            font-size: 28px;
+            font-weight: 650;
+            color: azure;
+            font-family: cursive;
+            text-shadow: 2px 4px 6px azure;
+
+          }
+          
+          .name >span{
+            font-size:55px;
+            font-weight: 600;
+            color: azure;
+            font-family: cursive;
+            text-shadow: 2px 4px 6px azure;
+          }
+          .ima{
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            margin-left: 15px;
+            margin-top: 65px;
+            box-sizing:border-box;
+            
+          }
+          #tag{
+              padding:15px 30px ;
+              font-size: 16px;
+              font-weight: 550;
+              color: azure;
+              font-family: cursive;
+          }
+          @keyframes colorChange {
+            0% { color: rgb(86, 223, 244); }
+            25% { color: rgb(114, 252, 176); }
+            50% { color: rgb(232, 95, 184); }
+            75% { color: rgb(235, 179, 74); }
+            100% { color: rgb(244, 110, 110); }
+        }
+        .animated-text span {
+          font-size: x-large;
+          font-weight: 900;
+            animation: colorChange 2s infinite;
+            animation-delay: calc(var(--index) * 0.2s);
+        }
+        @keyframes glow {
+          0% { text-shadow:  5px 5px 10px rgb(246, 93, 175); }
+          25% { text-shadow: 5px 5px 10px rgb(221, 202, 104); }
+          50% { text-shadow: 5px 5px 10px rgb(103, 245, 238); }
+          75% { text-shadow: 5px 5px 10px rgb(255, 201, 101); }
+          100% { text-shadow: 5px 5px 10px rgb(255, 255, 91); }
+      }
+      .name >span {
+          font-weight: bold;
+          font-size: 45px;
+          animation: glow 2s infinite alternate;
+      }
+        
+        </style>
+        <link rel="stylesheet" href="portfolio.css">
+        <link rel="stylesheet" href="projects.css">
+       <link rel="stylesheet" href="styles.css">
+       
+
+    </head>
+    <body>
+      <div class="floating-shapes">
+        <div style="top: 10%; left: 15%; width: 50px; height: 50px;"></div>
+        <div style="top: 30%; left: 55%; width: 70px; height: 70px;"></div>
+        <div style="top: 70%; left: 35%; width: 90px; height: 90px;"></div>
+        <div style="top: 50%; left: 10%; width: 35px; height: 35px;"></div>
+        <div style="top: 90%; left: 63%; width: 63px; height: 63px;"></div>
+    </div>
+        <DIV class="navbar">
+            <div id="name" class="animated-text">
+              <span style="--index:0">A</span>
+              <span style="--index:1">S</span>
+              <span style="--index:2">H</span>
+              <span style="--index:3">O</span>
+              <span style="--index:4">K</span>
+            
+            </div>
+            <a href="#home"> <div class="navItem" onclick="showOverlay('Home')>Home</div></a>
+            <a href="#about"><div class="navItem" onclick="showOverlay('About')>About</div></a>
+            <a href="#skills"><div class="navItem" onclick="showOverlay('Skills')>Skills</div></a>
+            <a href="#projects"><div class="navItem" onclick="showOverlay('Projects')>Projects</div></a>
+            <a href="#contact"><div class="navItem" onclick="showOverlay('Contact')>Contact</div></a>
+        </DIV>
+      
+      <div id="home">
+        <div class="headline">
+                    <div class="name">I am <span>Ashok Kumar</span> ,from Proddatur.</div>
+                    <div class="ima"><img src="pp5.png" alt=""></div>
+        </div>
+        <div id="tag">Currently,I am pursuating my Bachelor's degree in CBIT Proddatur</div>
+            
+  
+          </div>
+                <div class="about-1" id="about">About Me</div>
+              
+                <div class="aboutprofile">
+                      <div class="aboutimg">
+                      <img src="pp5.png" length="200px" width="200px" alt="">
+                      </div>
+                <     <div class="about-2">
+                      <p>
+                             Ashok Kumar Reddy Chagamreddy, a passionate Frontend Developer with a strong foundation in HTML5, CSS3, JavaScript,java and Python, along with experience in React JS and Bootstrap.<p>Currently pursuing my B.Tech in Computer Science at Chaitanya Bharathi Institute of Technology, I am committed to continuous learning and staying up-to-date with the latest web development trends. My participation in tech events like TechVision 2024 reflects my enthusiasm for innovation and collaboration in the tech industry.
+                           </p> <p> My patience and ability to remain calm under pressure make me an effective team player.                 
+                            When I’m not developing websites, you’ll find me on the cricket field or experimenting in the kitchen!
+                             Let’s connect and build something amazing together. 🚀</p>
+                     </p>
+                      </div>
+                </div>
+           </div>
+           <div class="skills">
+                <div id="skills">
+                <div class="skills-1">Skills</div> 
+                            
+                  <div class="skills-container">
+                      <div class="skill">
+                          <div class="circle" data-percent="90"></div>
+                          <p>HTML5</p>
+                      </div>
+                      <div class="skill">
+                          <div class="circle" data-percent="85"></div>
+                          <p>CSS3</p>
+                      </div>
+                      <div class="skill">
+                          <div class="circle" data-percent="75"></div>
+                          <p>JavaScript</p>
+                      </div>
+                      <div class="skill">
+                          <div class="circle" data-percent="65"></div>
+                          <p>Python</p>
+                      </div>
+                      <div class="skill">
+                          <div class="circle" data-percent="55"></div>
+                          <p>Java</p>
+                      </div>
+                      <div class="skill">
+                          <div class="circle" data-percent="50"></div>
+                          <p>React JS</p>
+                      </div>
+                      <div class="skill">
+                        <div class="circle" data-percent="80"></div>
+                        <p>Bootstrap</p>
+                    </div>
+                  </div>
+              </div>
+           </div>
+           <div class="projects">
+            <div id="projects"></div>
+              <div class="skills-1">Projects</div> 
+            
+                <div class="projects-container">
+                    <div class="project">
+                        <h3>Simple Calculator</h3>
+                        <p>A web-based calculator with basic arithmetic operations and a sleek design.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Movie Reviews & Ratings</h3>
+                        <p>Users can browse and rate movies, with dynamic UI and interactive charts.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Sports Equipment Store</h3>
+                        <p>An Amazon-style e-commerce platform for buying sports gear online.</p>
+                    </div>
+                    <div class="project">
+                        <h3>Cooking Recipe Guide</h3>
+                        <p>Select a recipe and get step-by-step cooking instructions with images.</p>
+                    </div>
+                    <div class="project">
+                      <h3>Tourist Places Explorer</h3>
+                      <p>Discover famous tourist destinations with details, maps, and user reviews.</p>
+                  </div>
+                </div>
+            </section>
+            
+           </div>
+           <div class="contact">
+            <div id="contact"></div>
+            <div class="skills-1">Contact</div> 
+             
+            <div class="containerskills">
+              <div class="boxskills red" id="bred">
+                  <h2>LinkedIn</h2>
+                  <img src="linkedin_qr.png" alt="LinkedIn QR">
+                  <p>@YourLinkedIn</p>
+              </div>
+              <div class="boxskills green" id="bgreen">
+                  <h2>WhatsApp</h2>
+                  <img src="whatsapp.jpg" alt="WhatsApp QR">
+                  <p>+91 9908483013</p>
+              </div>
+              <div class="boxskills orange" id="borange">
+                  <h2>Github</h2>
+                  <img src="frame.png" alt="Instagram QR">
+                  <p>@ashok3905</p>
+              </div>
+              <div class="boxskills yellow" id="byellow">
+                  <h2>Gmail</h2>
+                  <img src="qrcode_166511962_eb7fa0c119acc8dcb76a2cef00ee17f2.png" alt="Portfolio QR">
+                  <p>chagamreddyashokkumar@gmail.com</p>
+              </div>
+          </div>
+          
+           </div>
+      </body>
+</html>

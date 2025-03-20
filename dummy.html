@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Loader</title>
+    <style>
+      /* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(1, 1, 50);
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Centered Text */
+.portfolio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.portfolio-text {
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #0099ff;
+  animation: tracking-in-expand-fwd 3s ease-in-out both;
+}
+
+/* Tracking In Expand Forward Animation */
+@keyframes tracking-in-expand-fwd {
+  0% {
+      letter-spacing: -10px;
+      opacity: 0;
+      transform: scale(0.9);
+  }
+  100% {
+      letter-spacing: 1px;
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+/* Tracking Out Expand Forward Animation */
+@keyframes tracking-out-expand-fwd {
+  0% {
+      letter-spacing: 1px;
+      opacity: 1;
+      transform: scale(1);
+  }
+  100% {
+      letter-spacing: 10px;
+      opacity: 0;
+      transform: scale(1.2);
+  }
+}
+
+.tracking-out-expand-fwd {
+  animation: tracking-out-expand-fwd 3s ease-in-out both;
+}
+span{
+  font-size: 100px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px #00ccff, 0 0 20px #0099ff;
+  font-family: cursive;
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Centered Portfolio Text -->
+    <div class="portfolio-container">
+        <h1 class="portfolio-text"><span>PORTFOLIO</span></h1>
+    </div>
+
+    <script>
+        // Apply OUT animation after IN animation completes
+        setTimeout(() => {
+            document.querySelector('.portfolio-text').classList.add('tracking-out-expand-fwd');
+        }, 5000); // Start OUT animation after 2 seconds
+
+        // Redirect to index.html after OUT animation
+        setTimeout(() => {
+            window.location.href = "index.html";
+        }, 9000); // Redirect after OUT animation (1s)
+    </script>
+
+</body>
+</html>

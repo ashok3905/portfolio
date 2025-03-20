@@ -1,0 +1,87 @@
+
+/* Grid Container */
+.containerskills {
+    display: grid;
+    margin-left: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 1000px; /* Increased width */
+    justify-content: center;
+}
+.boxskills h2{
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+    text-transform: uppercase;
+    font-family: cursive;
+}
+.boxskills p{
+    font-size: 16px;
+    opacity: 0.8;
+    line-height: 1.5;
+    font-family: cursive;
+}
+/* Box Styling */
+.boxskills {
+    margin-left: 80px;
+    padding-left: 40px;
+    width: 350px;  /* Increased width */
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    gap: 25px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    animation: float 3s infinite ease-in-out alternate, neonGlow 1.5s infinite alternate;
+    transition: transform 3s ease-in-out;
+    backdrop-filter: blur(10px); /* Glassmorphism effect */
+}
+
+/* Hover Effect */
+.box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 35px white;
+}
+#bred{
+    text-shadow: 6px 12px 18px #ff073a;
+}
+#bgreen{
+    text-shadow: 6px 12px 18px #33ff57;
+}
+#borange{
+    text-shadow: 6px 12px 18px #ff8c00;
+}
+
+#byellow{
+    text-shadow: 6px 12px 18px #ffdd33;
+}
+/* Neon Glow Colors */
+.red { box-shadow: 0 0 20px #ff073a; border-color: #ff073a; }
+.green { box-shadow: 0 0 20px #33ff57; border-color: #33ff57; }
+.orange { box-shadow: 0 0 20px #ff8c00; border-color: #ff8c00; }
+.yellow { box-shadow: 0 0 20px #ffdd33; border-color: #ffdd33; }
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-15px); }
+}
+
+/* Neon Glow Animation */
+@keyframes neonGlow {
+    0% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); }
+    100% { box-shadow: 0 0 40px rgba(255, 255, 255, 0.9); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .box {
+        width: 90%;
+    }
+}
